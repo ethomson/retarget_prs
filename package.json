@@ -1,8 +1,11 @@
 {
   "name": "retarget_prs",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Batch retarget GitHub pull requests onto a different base branch.",
   "main": "index.js",
+  "bin": {
+    "retarget_prs": "./index.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

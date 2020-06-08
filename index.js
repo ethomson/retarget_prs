@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const { Octokit } = require('@octokit/rest');
 const minimist = require('minimist');
 const pkginfo = require('pkginfo');
