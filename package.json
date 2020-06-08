@@ -1,0 +1,30 @@
+{
+  "name": "retarget_prs",
+  "version": "0.1.0",
+  "description": "Batch retarget GitHub pull requests onto a different base branch.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ethomson/retarget_prs.git"
+  },
+  "keywords": [
+    "GitHub",
+    "Pull",
+    "Request",
+    "PRs"
+  ],
+  "author": "Edward Thomson <ethomson@edwardthomson.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ethomson/retarget_prs/issues"
+  },
+  "homepage": "https://github.com/ethomson/retarget_prs#readme",
+  "dependencies": {
+    "@octokit/rest": "^17.11.0",
+    "minimist": "^1.2.5",
+    "pkginfo": "^0.4.1"
+  }
+}
