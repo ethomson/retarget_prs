@@ -15,15 +15,7 @@ This utility will automate that, and make this change en masse.
 ## Setup
 
 1. Ensure that you have [Node.js](https://nodejs.org/en/download/) installed.
-2. Clone this git repository:
-   ```
-   git clone https://github.com/ethomson/retarget_prs
-   ```
-3. Install the dependencies:
-   ```
-   cd retarget_prs
-   npm install
-   ```
+2. Create a [personal access token](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line) to use to authenticate.
 
 ## How to
 
@@ -41,11 +33,12 @@ If you want to change the name of the default branch on GitHub:
 
    ![Set the new default](docs/newdefault.png)
 
-3. Update the existing pull requests:
+3. Update the existing pull requests.  Specify your PAT with `--token`, your
+   repository URL and the old and new branch names:
 
    ```
-    node index.js https://github.com/your/repo master main
-    ```
+   npx retarget_prs --token your_pat https://github.com/your/repo master main
+   ```
 
 ## Questions?
 
