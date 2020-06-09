@@ -36,3 +36,9 @@ If you want to change the name of the default branch on GitHub:
 ## Questions?
 
 Need help?  [Open a GitHub issue](https://github.com/ethomson/retarget_prs).
+
+## License
+
+Copyright (c), Edward Thomson.  All rights reserved.
+
+Available under the MIT license, see the included [LICENSE.txt](LICENSE.txt) for details.
