@@ -1,4 +1,12 @@
 #!/usr/bin/env node
+#
+# Batch update the base of all the pull requests in your GitHub repository
+# that are currently targeting a different branch.  This is useful if you
+# want to change the name of your default branch, but you have pull
+# requests open.
+#
+# See also:
+# https://www.hanselman.com/blog/EasilyRenameYourGitDefaultBranchFromMasterToMain.aspx
 
 const { Octokit } = require('@octokit/rest');
 const minimist = require('minimist');
