@@ -188,7 +188,7 @@ function help(dest = console.log) {
     dest(`    <repo>:          The URL of the GitHub repository`);
     dest(`    <old_branch>:    The name of the old branch; pull requests targeting this`);
     dest(`                     base branch will be updated to refer to the <new_branch>.`);
-    dest(`    <old_branch>:    The name of the new branch; pull requests will now be`);
+    dest(`    <new_branch>:    The name of the new branch; pull requests will now be`);
     dest(`                     based on this branch.  This branch must already exist.`);
     dest(`    --token <token>: The authentication token (PAT) to use when authenticating`);
     dest(`                     to the GitHub repository.  If not specified, the`);
