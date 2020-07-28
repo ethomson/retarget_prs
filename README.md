@@ -2,40 +2,55 @@
 
 ![Master to Main](docs/master_to_main.gif)
 
-This utility will change the base of all the pull requests in your GitHub repository that are currently targeting a different branch.  This is useful if you want to [change the name of your default branch](https://www.hanselman.com/blog/EasilyRenameYourGitDefaultBranchFromMasterToMain.aspx), but you have pull requests open.
+Normally, [changing the base of an existing pull request](https://github.blog/2016-08-15-change-the-base-branch-of-a-pull-request/) is a one-at-a-time, manual operation.
 
-For example, if you use the _default_ default branch of `master`, but you want to change that to a name like `main`, by default the pull requests that you already have open in your repository will continue to target the old default branch (`master`).
+This utility changes the base of all open pull requests in your GitHub repository from one branch to another. This is useful if you want to [change the name of your default branch](https://www.hanselman.com/blog/EasilyRenameYourGitDefaultBranchFromMasterToMain.aspx) and you have open pull requests in your repository.
 
-Fortunately, you can [change the base of an existing pull request](https://github.blog/2016-08-15-change-the-base-branch-of-a-pull-request/), but this is a one-at-a-time, manual operation.
-
-This utility will automate that, and make this change en masse.
+For example, if you change your default branch from `master` to `main`, open pull requests in your repository still target `master`. This utility automates changing the base of open pull requests.
 
 ## Setup
 
-1. Ensure that you have [Node.js](https://nodejs.org/en/download/) installed.
-2. Create a [personal access token](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line) to use to authenticate.
+1. Install [Node.js](https://nodejs.org/en/download/).
+
+2. Create a [GitHub personal access token](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line).
 
 ## How to
 
-If you want to change the name of the default branch on GitHub:
+## Change the default branch name
 
-1. Go to your project and make sure that you are on the current default branch (`master`).  Open the branch picker, and type the name of the new branch (`main`).  Select `Create branch: main from 'master'`.
+To change the name of the default branch on GitHub:
+
+1. Go to your project.
+
+   Make sure that you are on the current default branch (`master`).
+   
+2. Open the branch picker and enter the name of the new branch (`main`).  
+
+3. Select `Create branch: main from 'master'`.
 
    ![Create new branch](docs/newbranch.png)
 
-2. Set this as the new default branch.  Go to your project's settings, then select "Branches".  Under "Default branch", open the branch picker and select the new default branch (`main`).
+### Set the new branch as the default
+
+1. Open your project settings.
+
+2. Select "Branches" in the left nav. 
+
+   Under "Default branch", open the branch picker and select the new default branch (`main`).
 
    ![Set the new default](docs/newdefault.png)
 
-3. Update the existing pull requests.  Specify your PAT with `--token`, your repository URL and the old and new branch names:
+## Update existing pull requests
+
+Specify your personal access token (pat) with `--token`, your repository URL, and the old and new branch names:
 
    ```
    npx retarget_prs --token your_pat https://github.com/your/repo master main
    ```
 
-## Questions?
+## Need help?
 
-Need help?  [Open a GitHub issue](https://github.com/ethomson/retarget_prs).
+Open a [GitHub issue](https://github.com/ethomson/retarget_prs).
 
 ## License
 
